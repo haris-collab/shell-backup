@@ -1,0 +1,16 @@
+# Backup script using cp for Dropbox
+
+# Source file to backup
+source_file="/Users/haris/Desktop/this_will"
+
+# Destination directory in Dropbox
+dropbox_dir="/Users/haris/Dropbox"
+
+# Copy file to Dropbox directory with elevated privileges
+# Print source and destination paths for debugging
+echo "Source file: $source_file"
+echo "Dropbox directory: $dropbox_dir"
+
+# Attempt to copy file to Dropbox directory with elevated privileges
+echo "Attempting to copy files..."
+echo "6801" | sudo -S cp -r "$source_file" "$dropbox_dir"
